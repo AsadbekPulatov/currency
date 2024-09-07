@@ -18,7 +18,7 @@ class CurrencyCheckService
         return array_unique($new_arr);
     }
 
-    public function check($vars, $startDate, $endDate)
+    public function check($vars, $startDate, $endDate, $period)
     {
         $currencies = $this->getCurrensies($startDate, $endDate);
 
