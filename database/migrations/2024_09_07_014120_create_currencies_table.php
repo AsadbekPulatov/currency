@@ -21,8 +21,9 @@ return new class extends Migration
             $table->string('ccyNm_EN');
             $table->tinyInteger('nominal');
             $table->decimal('rate');
-            $table->decimal('diff', 3);
+            $table->decimal('diff');
             $table->date('date');
+            $table->date('created_date');
 //            $table->timestamps();
         });
     }

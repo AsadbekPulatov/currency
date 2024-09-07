@@ -17,6 +17,10 @@ class CurrencyClient
     }
 
     public function getCurrencies(){
-        return Http::get(self::base_url.$this->type.'/'.$this->date)->json();
+        $data = Http::get(self::base_url.$this->type.'/'.$this->date.'/')->json();
+        foreach ($data as &$item){
+            $item['created_date'] = $this->date;
+        }
+        return $data;
     }
 }
